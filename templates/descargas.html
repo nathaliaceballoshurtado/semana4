@@ -1,0 +1,40 @@
+<!doctype html>
+<html>
+
+<title>Consulta del estatus de la descarga</title>
+  <style type="text/css">
+  body {
+    font-family: Georgia, "Times New Roman",
+          Times, serif;
+    color: black;
+    background-color: pink;}
+  </style>
+</head>
+
+   <body>
+   
+ <center>
+     <table border = 1>
+         <thead>
+            <td>id</td>
+            <td>Nombre</td>
+            <td>Porcentaje</td>
+            <td>Status</td>
+	   
+         </thead>        
+
+         {% for row in rows %}
+            <tr>
+               <td>{{row[0]}}</td>
+               <td>{{row[1]}}</td>
+               <td> {{row[2]}}</td>
+               <td>{{row[3]}}</td>	
+               
+            </tr>
+         {% endfor %}
+      </table>
+<center>      
+      <a href = "/">Go back to principal page</a>
+      
+   </body>
+</html>
